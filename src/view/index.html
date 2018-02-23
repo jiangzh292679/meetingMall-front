@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= require("html-loader!./common/layout/header-common.html")%>
+</head>
+<body>
+    <!--引入nav导航条-->
+    <%= require("html-loader!./common/nav/nav.html") %>
+    <!--引入head区域-->
+    <%= require("html-loader!./common/header/header.html")%>
+    <div class="page-wrap w">
+        <%= require("html-loader!./common/nav-slide/nav-slide.html")%>
+        <div class="context with-nav">
+            with-nav
+        </div>
+    </div>
+    <!--引入foot区域-->
+    <%= require("html-loader!./common/layout/footer-common.html")%>
+</body>
+</html>

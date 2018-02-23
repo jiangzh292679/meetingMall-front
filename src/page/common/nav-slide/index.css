@@ -1,0 +1,21 @@
+.nav-side{
+    float: left;
+    min-height: 150px;
+    width: 130px;
+}
+
+.nav-side .nav-item{
+    margin: 10px 0;
+    line-height: 25px;
+    font-size: 13px;
+    font-weight : bold;
+}
+
+.nav-side .nav-item.active .link{
+    color: #c60023;
+}
+
+.context.with-nav{
+    float: left;
+    width: 950px;
+}
