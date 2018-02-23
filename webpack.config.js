@@ -19,7 +19,8 @@ var getHtmlConfig = function (path,name,title) {
 var config = {
     entry: {
         'common'       : ['./src/util/publicTools.js'],
-        'index'        : ['./src/page/index.js']
+        'index'        : ['./src/page/index.js'],
+        'login'        : ['./src/page/system/login/index.js']
     },
     output: {
         filename    : '[name].js',
@@ -75,7 +76,8 @@ var config = {
             name: 'common',
             filename: 'page/base/base.js'
         }),
-        new HtmlWebpackPlugin(getHtmlConfig('','index','首页'))
+        new HtmlWebpackPlugin(getHtmlConfig('','index','偶遇Mall-首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('','login','偶遇Mall-登陆页'))
     ]
 };
 

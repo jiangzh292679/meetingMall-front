@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <%= require("html-loader!./common/layout/header-common.html")%>
-</head>
-<body>
-    <i class="fas fa-camera-retro"></i>
+    <head>
+        <%= require("html-loader!./common/layout/header-common.html")%>
+    </head>
+    <body>
+        <!--引入nav导航条-->
+        <%= require("html-loader!./common/nav-simple/nav-simple.html") %>
+        <div class="w">
 
-    <%= require("html-loader!./common/layout/footer-common.html")%>
-</body>
+        </div>
+        <!--引入foot区域-->
+        <%= require("html-loader!./common/layout/footer-common.html")%>
+    </body>
 </html>
