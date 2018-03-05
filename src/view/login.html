@@ -6,8 +6,28 @@
     <body>
         <!--引入nav导航条-->
         <%= require("html-loader!./common/nav-simple/nav-simple.html") %>
-        <div class="w">
-
+        <div class="wrapper">
+            <div class="w">
+                <div class="loginContent clearfix">
+                    <div class="loginTab">
+                        <a href="" class="link username selected">账号登陆</a>|
+                        <a href="#" class="link QRCode" title="此功能暂未开放">扫码登陆</a>
+                    </div>
+                    <div class="loginForm">
+                        <input type="text" placeholder="请输入用户名" class="loginName" />
+                        <input type="password" placeholder="请输入密码" class="password" />
+                    </div>
+                    <input type="button" class="btn submitBtn" value="登录" />
+                    <div class="promptContent">
+                        <span class="toRegister">
+                            <a href="./register.html" class="link">立即注册</a>
+                        </span>|
+                        <span class="toForgetPassword">
+                            <a href="" class="link">忘记密码</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
         <!--引入foot区域-->
         <%= require("html-loader!./common/layout/footer-common.html")%>

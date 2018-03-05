@@ -5,16 +5,13 @@ require('_page/common/nav-simple/index.js');
 require('_node_modules/font-awesome/css/font-awesome.min.css');
 
 
-var login = {
+var register = {
     init : function () {
         this.bindEvent();
     },
     bindEvent : function () {
-        // 扫码登陆，现阶段未支持
-        $('.link.QRCode').click(function () {
-            alert('此功能本期未开放');
-        })
+
     }
 }
 
-login.init();
+register.init();

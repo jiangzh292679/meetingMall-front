@@ -87,12 +87,13 @@ input[type='checkbox']{
     cursor: pointer;
     text-decoration: none;
 }
-.btn-mini{
+.btn-mini {
     height: 25px;
     line-height: 25px;
     font-size: 12px;
     padding: 0 10px;
 }
+
 /* loading */
 .loading{
     margin: 10px auto;
@@ -103,4 +104,18 @@ input[type='checkbox']{
     border-radius: 5px;
     background: url(../../images/icon/loading.gif) no-repeat;
     opacity: .6;
+}
+
+
+/* 清除浮动 */
+.clearfix:after{
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: ".";
+}
+
+.clearfix{
+    zoom:1;    /* IE/7/6*/
 }

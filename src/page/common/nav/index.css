@@ -1,7 +1,7 @@
 .nav{
     height: 35px;
     line-height: 35px;
-    background: #eee;
+    background: rgb(51,51,51);
 }
 /*用户相关部分*/
 .nav .user-info{
@@ -20,4 +20,11 @@
 .nav .nav-list .nav-item{
     display: inline-block;
     margin-left: 5px;
+}
+
+.nav .nav-list .nav-item.nav-cart{
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    background: #888;
 }

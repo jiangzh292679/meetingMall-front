@@ -20,10 +20,11 @@ var config = {
     entry: {
         'common'       : ['./src/util/publicTools.js'],
         'index'        : ['./src/page/index.js'],
-        'login'        : ['./src/page/system/login/index.js']
+        'login'        : ['./src/page/system/login/index.js'],
+        'register'        : ['./src/page/system/register/index.js']
     },
     output: {
-        filename    : '[name].js',
+        filename    : 'page/[name].js',
         path        : path.resolve(__dirname, 'dist'),
         publicPath : '/dist'
     },
@@ -76,8 +77,9 @@ var config = {
             name: 'common',
             filename: 'page/base/base.js'
         }),
-        new HtmlWebpackPlugin(getHtmlConfig('','index','偶遇Mall-首页')),
-        new HtmlWebpackPlugin(getHtmlConfig('','login','偶遇Mall-登陆页'))
+        new HtmlWebpackPlugin(getHtmlConfig('','index','Meeting Mall-首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('','login','Meeting Mall-登陆页')),
+        new HtmlWebpackPlugin(getHtmlConfig('','register','Meeting Mall-注册页面'))
     ]
 };
 

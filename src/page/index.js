@@ -3,11 +3,12 @@ require('_node_modules/font-awesome/css/font-awesome.min.css');
 require('_page/common/nav/index.js');
 require('_page/common/footer/index.js');
 require('./common/header/index.js');
+require('./common/banner/index');
 
 var _navSlide = require('./common/nav-slide/index.js');
 
 options = {
-    name : 'my-mall'
+    name : 'Meeting-MALL'
 }
 
 _navSlide.init(options);
