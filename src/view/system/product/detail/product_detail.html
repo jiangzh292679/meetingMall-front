@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= require("html-loader!_view/common/layout/header-common.html")%>
+    <title>产品详情页</title>
+</head>
+<body>
+<!--引入nav导航条-->
+<%= require("html-loader!_view/common/nav/nav.html") %>
+<!--引入head区域-->
+<%= require("html-loader!_view/common/header/header.html")%>
+<div class="page-wrap">
+    <div class="demarcation-line"></div>
+    <div class="page-nav">
+        <div class="w">
+            <a href="../../../index.html" class="link to-index">Meeting-MALL</a> >
+            <a href="#" class="link to-detail">商品详情</a>
+        </div>
+    </div>
+    <div class="w">
+        <div class="detail-content">
+            <div class="image-content">
+                <div class="main-image-div">
+                    <img id="mainImage" alt="" name="mainImage">
+                </div>
+                <div class="sub-images-div" id="subImages" name="subImages">
+
+                </div>
+            </div>
+            <div class="product-content">
+                <div id="name">Apple iPhone 7 Plus (A1661) 128G 玫瑰金色 移动联通电信4G手机</div>
+                <div id="subTitle">iPhone 7，现更以红色呈现。</div>
+                <div id="price">价格：<span class="product-price">￥6999.00</span></div>
+                <div id="stock">库存：<span class="product-stock">9991</span></div>
+                <div id="buyNum">
+                    数量：<input type="text" class="buyNumText" value="1" id="buyNums" readonly/>
+                    <input type="button" id="addNum" class="buyNumBtn" value="+"/>
+                    <input type="button" id="lessNum" class="buyNumBtn" value="-"/>
+                </div>
+                <div class="btn">加入购物车</div>
+            </div>
+        </div>
+        <div class="detail-title">
+            <h3>商品详情</h3>
+        </div>
+        <div class="detail-info-content"></div>
+    </div>
+</div>
+<!--引入foot区域-->
+<%= require("html-loader!_view/common/layout/footer-common.html")%>
+</body>
+</html>

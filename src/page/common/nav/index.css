@@ -21,10 +21,3 @@
     display: inline-block;
     margin-left: 5px;
 }
-
-.nav .nav-list .nav-item.nav-cart{
-    display: inline-block;
-    width: 100px;
-    height: 35px;
-    background: #888;
-}

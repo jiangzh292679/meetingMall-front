@@ -21,7 +21,8 @@ var config = {
         'common'       : ['./src/util/publicTools.js'],
         'index'        : ['./src/page/index.js'],
         'login'        : ['./src/page/system/login/index.js'],
-        'register'        : ['./src/page/system/register/index.js']
+        'register'        : ['./src/page/system/register/index.js'],
+        'product_detail'        : ['./src/page/system/product/detail/index.js']
     },
     output: {
         filename    : 'page/[name].js',
@@ -33,7 +34,8 @@ var config = {
             '_util'            : path.resolve(__dirname, 'src/util'),
             '_node_modules'   : path.resolve(__dirname,'node_modules'),
             '_service'         : path.resolve(__dirname,'src/service'),
-            '_page'            : path.resolve(__dirname,'src/page')
+            '_page'            : path.resolve(__dirname,'src/page'),
+            '_view'            : path.resolve(__dirname,'src/view')
         }
     },
     module: {
@@ -79,7 +81,8 @@ var config = {
         }),
         new HtmlWebpackPlugin(getHtmlConfig('','index','Meeting Mall-首页')),
         new HtmlWebpackPlugin(getHtmlConfig('','login','Meeting Mall-登陆页')),
-        new HtmlWebpackPlugin(getHtmlConfig('','register','Meeting Mall-注册页面'))
+        new HtmlWebpackPlugin(getHtmlConfig('','register','Meeting Mall-注册页面')),
+        new HtmlWebpackPlugin(getHtmlConfig('system/product/detail/','product_detail','Meeting Mall-产品详情页面'))
     ]
 };
 

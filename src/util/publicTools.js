@@ -2,7 +2,8 @@
 var Hogan = require('hogan.js');
 // 公共参数配置
 var conf = {
-    serverHost : ''
+    serverHost : 'http://www.meetingmall.com',
+    imgServerHost : 'http://img.meetingmall.com/'
 }
 // 工具类封装
 var _lzkjConfig = {
@@ -16,7 +17,7 @@ var _lzkjConfig = {
         $.ajax({
             type : paramData.methodType || 'get',
             url  : paramData.url || '',
-            dataType : paramData.dataType || 'json',
+            dataType : paramData.dataType || 'jsonp',
             data : paramData.data || '',
             success : function (result) {
                 // 自定义返回值，具体Code含义参见README
@@ -40,6 +41,10 @@ var _lzkjConfig = {
     // 获取服务器地址封装[用于动态获取开发环境地址与生产环境地质]
     getServerUrl : function (path) {
         return conf.serverHost + path;
+    },
+    // 获取图片服务器地址
+    getImgServerUrl : function (path) {
+        return conf.imgServerHost + path;
     },
     // 获取url参数封装
     getURLParmByName : function (name) {
