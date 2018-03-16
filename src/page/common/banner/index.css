@@ -1,0 +1,35 @@
+/*banner图片部分*/
+.banner .banner-images{
+    z-index: 1;
+}
+
+/*banner导航部分*/
+.banner .banner-nav{
+    width: 235px;
+    height: 399px;
+    position: absolute;
+    padding: 30px 0 30px 0;
+    top: 1px;
+    left: 1px;
+    background: rgba(0,0,0,0.4);
+    z-index: 2;
+}
+
+.banner .banner-nav .nav-list .nav-items{
+    width: 235px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.banner .banner-nav .nav-list .nav-items:hover{
+    background: rgb(255,103,0);
+    cursor: pointer;
+}
+
+.banner .banner-nav .nav-list .nav-items span{
+    display: inline-block;
+    margin-left: 30px;
+    font-size: 14px;
+    width: 60px;
+    color: #fff;
+}

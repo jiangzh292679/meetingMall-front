@@ -2,9 +2,12 @@
 var Hogan = require('hogan.js');
 // 公共参数配置
 var conf = {
-    serverHost : 'http://www.meetingmall.com',
-    imgServerHost : 'http://img.meetingmall.com/'
-}
+    serverHost : 'http://localhost',//'http://www.meetingmall.com',
+    imgServerHost : ''//'http://img.meetingmall.com/'
+};
+// 获取localStorage对象，不判断老版本浏览器的情况
+var _localStorage=window.localStorage;
+
 // 工具类封装
 var _lzkjConfig = {
     /*
@@ -15,19 +18,22 @@ var _lzkjConfig = {
     request : function (paramData) {
         var _this = this;
         $.ajax({
-            type : paramData.methodType || 'get',
-            url  : paramData.url || '',
-            dataType : paramData.dataType || 'jsonp',
-            data : paramData.data || '',
-            success : function (result) {
+            type        : paramData.methodType || 'get',
+            url         : paramData.url || '',
+            dataType    : paramData.dataType || 'json',
+            data        : paramData.data || '',
+            headers    : {
+                Authorization :  'Bearer '+_localStorage.token || ''
+            },
+            success     : function (result) {
                 // 自定义返回值，具体Code含义参见README
                 if(0 === result.status){
                     // 回调成功处理方法
                     typeof paramData.success === 'function' && paramData.success(result.data,result.msg);
-                }else if (10 === result.status()){
+                }else if (10 === result.status){
                     // 用户未登录，跳转登录页面
                     _this.toLogin();
-                }else if(1 === result.status()){
+                }else if(1 === result.status){
                     // 请求正常，但是业务出现异常，返回异常数据和异常信息
                     typeof paramData.failed === 'function' && paramData.failed(result.data,result.msg);
                 }
@@ -84,6 +90,20 @@ var _lzkjConfig = {
     },
     goHome : function(){
         window.location.href = './view/index.html';
+    },
+    // 写入jwt信息
+    setToken: function (token) {
+        _localStorage['token']=token;
+    },
+    setRandomKey:function (randomKey) {
+        _localStorage['randomKey']=randomKey;
+    },
+    // 获取jwt的token
+    getToken : function () {
+        return _localStorage.token;
+    },
+    getRandomKey:function () {
+        return _localStorage.randomKey;
     }
 };
 

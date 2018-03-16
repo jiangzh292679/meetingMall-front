@@ -1,0 +1,9 @@
+<div class="banner-images" id="b04">
+    <ul>
+        <li><img src="../../../images/banner/banner1.jpg" alt="" width="1080" height="460" ></li>
+        <li><img src="../../../images/banner/banner2.jpg" alt="" width="1080" height="460" ></li>
+        <li><img src="../../../images/banner/banner3.jpg" alt="" width="1080" height="460" ></li>
+        <li><img src="../../../images/banner/banner4.jpg" alt="" width="1080" height="460" ></li>
+        <li><img src="../../../images/banner/banner6.jpg" alt="" width="1080" height="460" ></li>
+    </ul>
+</div>

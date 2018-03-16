@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= require("html-loader!_view/common/layout/header-common.html")%>
+    <title>产品详情页</title>
+</head>
+<body>
+    <!--引入nav导航条-->
+    <%= require("html-loader!_view/common/nav/nav.html") %>
+    <!--引入head区域-->
+    <%= require("html-loader!_view/common/header/header.html")%>
+    <div class="page-wrap">
+        <div class="demarcation-line"></div>
+        <div class="page-nav">
+            <div class="w">
+                <a href="./index.html" class="link to-index">Meeting-MALL</a> >
+                <a href="#" class="link to-detail">商品列表</a>
+            </div>
+        </div>
+        <div class="w">
+            <ul class="page-list">
+
+            </ul>
+        </div>
+    </div>
+    <!--引入foot区域-->
+    <%= require("html-loader!_view/common/layout/footer-common.html")%>
+</body>
+</html>

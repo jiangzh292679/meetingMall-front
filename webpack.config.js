@@ -8,7 +8,7 @@ var HtmlWebpackPlugin        = require('html-webpack-plugin');
 var getHtmlConfig = function (path,name,title) {
     return {
         title     : title,
-        filename  : 'view/'+path+name+'.html',
+        filename  : 'view/'+name+'.html',
         template  : 'src/view/'+path+name+'.html',
         hash      : 'true',
         inject    : 'auto',
@@ -22,12 +22,19 @@ var config = {
         'index'        : ['./src/page/index.js'],
         'login'        : ['./src/page/system/login/index.js'],
         'register'        : ['./src/page/system/register/index.js'],
-        'product_detail'        : ['./src/page/system/product/detail/index.js']
+        'product_detail'        : ['./src/page/system/product/detail/index.js'],
+        'product_list'        : ['./src/page/system/product/list/index.js']
     },
     output: {
         filename    : 'page/[name].js',
         path        : path.resolve(__dirname, 'dist'),
-        publicPath : '/dist'
+        publicPath : '/dist/'
+    },
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        compress: true,
+        port: 9000,
+        disableHostCheck: true
     },
     resolve:{
         alias: {
@@ -82,7 +89,8 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('','index','Meeting Mall-首页')),
         new HtmlWebpackPlugin(getHtmlConfig('','login','Meeting Mall-登陆页')),
         new HtmlWebpackPlugin(getHtmlConfig('','register','Meeting Mall-注册页面')),
-        new HtmlWebpackPlugin(getHtmlConfig('system/product/detail/','product_detail','Meeting Mall-产品详情页面'))
+        new HtmlWebpackPlugin(getHtmlConfig('system/product/detail/','product_detail','Meeting Mall-产品详情页面')),
+        new HtmlWebpackPlugin(getHtmlConfig('system/product/list/','product_list','Meeting Mall-产品列表页面'))
     ]
 };
 

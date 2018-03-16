@@ -13,21 +13,13 @@ var nav = {
     },
     // 绑定常见业务事件
     bindEvent : function () {
-        // 登录事件
-        $('js-login').click(function () {
-            _user.toLogin();
-        }),
         // 退出事件
-        $('js-logout').click(function () {
+        $('#userLogout').click(function () {
             _user.toLogout(function (res) {
                 window.location.reload();
             },function (errMsg) {
                 _tools.showFailedTip(errMsg);
             })
-        }),
-        // 注册事件
-        $('js-register').click(function () {
-            window.location.href = './user-register.html';
         })
     },
     // 首页加载用户信息
